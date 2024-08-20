@@ -79,6 +79,8 @@ services:
     healthcheck:
       test: /healthchecks/redis.sh
       interval: "5s"
+      timeout: 30s
+      retries: 50
     networks:
       - back-tier
 
